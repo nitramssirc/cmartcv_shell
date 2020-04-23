@@ -10,7 +10,7 @@ function ShellNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#link">Experience</Nav.Link>
+            <Nav.Link href="#experience">Experience</Nav.Link>
             <Nav.Link href="#link">Education</Nav.Link>
             <Nav.Link href="#link">Print</Nav.Link>
           </Nav>
