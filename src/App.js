@@ -3,6 +3,7 @@ import ShellNavbar from './Components/ShellNavbar'
 import Skills from './Components/Skills'
 import Experience from './Components/Experience'
 import PersonalProjects from './Components/PersonalProjects'
+import Education from './Components/Education'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Skills/>
       <Experience/>
       <PersonalProjects/>
+      <Education/>
     </div>
   );
 }
