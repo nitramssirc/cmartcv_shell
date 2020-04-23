@@ -1,5 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import wordpressIcon from "../Images/iconfinder_WordPress_345397.png"
+import linkedInIcon from "../Images/iconfinder_square-linkedin_317725.png"
 
 function ShellNavbar() {
   return (
@@ -21,7 +23,9 @@ function ShellNavbar() {
             <Navbar.Text>
               <a href="mailto('w.criss.martin@gmail.com')">
                 w.criss.martin@gmail.com
-              </a>{" "}
+              </a>
+              <a href="https://cmartcoding.com/" target="_blank" rel="noopener noreferrer"><img src={wordpressIcon} alt="Blog"/></a>
+              <a href="https://www.linkedin.com/in/crissmartin/" target="_blank" rel="noopener noreferrer"><img src={linkedInIcon} alt="LinkedIn"/></a>
             </Navbar.Text>
           </Nav>
         </Navbar.Collapse>
