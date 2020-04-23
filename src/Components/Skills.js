@@ -1,7 +1,7 @@
 import React from "react";
 
 function Skills(){
-    return <div style={{backgroundColor:"red", height:"200px"}}>
+    return <div id="skills" style={{backgroundColor:"red", height:"200px"}}>
         Skillz!!!
     </div>
 }
