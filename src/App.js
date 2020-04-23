@@ -4,6 +4,7 @@ import Skills from './Components/Skills'
 import Experience from './Components/Experience'
 import PersonalProjects from './Components/PersonalProjects'
 import Education from './Components/Education'
+import Print from './Components/Print'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Experience/>
       <PersonalProjects/>
       <Education/>
+      <Print/>
     </div>
   );
 }
