@@ -1,9 +1,8 @@
 import React from "react";
+import MicroFrontEnd from "./MicroFrontEnd"
 
 function Experience(){
-    return <div id="experience" style={{backgroundColor:"Blue", height:"1000px"}}>
-        Experience
-    </div>
+    return <MicroFrontEnd id="experience"/>
 }
 
 export default Experience

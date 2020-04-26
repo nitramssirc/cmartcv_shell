@@ -1,9 +1,8 @@
 import React from "react";
+import MicroFrontEnd from "./MicroFrontEnd"
 
 function Skills(){
-    return <div id="skills" style={{backgroundColor:"red", height:"1000px"}}>
-        Skillz!!!
-    </div>
+    return  <MicroFrontEnd id="skills"/>
 }
 
 export default Skills

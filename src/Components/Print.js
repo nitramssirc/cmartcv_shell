@@ -1,9 +1,8 @@
 import React from "react";
+import MicroFrontEnd from "./MicroFrontEnd"
 
 function Print(){
-    return <div id="print" style={{backgroundColor:"pink", height:"1000px"}}>
-        Print
-    </div>
+    return <MicroFrontEnd id="print"/>
 }
 
 export default Print

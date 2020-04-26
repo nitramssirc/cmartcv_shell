@@ -1,9 +1,8 @@
 import React from "react";
+import MicroFrontEnd from "./MicroFrontEnd"
 
 function PersonalProjects(){
-    return <div id="personal_projects" style={{backgroundColor:"yellow", height:"1000px"}}>
-        PersonalProjects
-    </div>
+    return <MicroFrontEnd id="personal_projects"/>
 }
 
 export default PersonalProjects
