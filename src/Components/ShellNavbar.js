@@ -11,11 +11,11 @@ function ShellNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#experience">Experience</Nav.Link>
-            <Nav.Link href="#personal_projects">Personal Projects</Nav.Link>
-            <Nav.Link href="#education">Education</Nav.Link>
-            <Nav.Link href="#print">Print</Nav.Link>
+            <Nav.Link href="#Skills">Skills</Nav.Link>
+            <Nav.Link href="#Experience">Experience</Nav.Link>
+            <Nav.Link href="#PersonalProjects">Personal Projects</Nav.Link>
+            <Nav.Link href="#Education">Education</Nav.Link>
+            <Nav.Link href="#Print">Print</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse>
