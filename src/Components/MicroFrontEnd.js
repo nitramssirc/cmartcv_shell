@@ -1,9 +1,9 @@
 import React from "react";
 
 function MicroFrontEnd(props){
-    const {id} = props;
+    const {data} = props;
 
-    return <div>{id}</div>
+    return <div>{data}</div>
 }
 
 export default MicroFrontEnd
