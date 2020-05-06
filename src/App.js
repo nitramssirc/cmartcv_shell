@@ -1,18 +1,28 @@
-import React from 'react';
-import ShellNavbar from './Components/ShellNavbar'
-import CVSection from './Components/CVSection'
+import React from "react";
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+
+import ShellNavbar from "./Components/ShellNavbar";
+import RouterSection from "./Components/RouterSection";
+import Home from "./Components/Home";
 
 
 function App() {
+
   return (
-    <div>
-      <ShellNavbar/>    
-      <CVSection name="Skills"/>
-      <CVSection name="Experience"/>
-      <CVSection name="PersonalProjects"/>
-      <CVSection name="Education"/>
-      <CVSection name="Print"/>
-    </div>
+      <div>
+        <ShellNavbar />
+        <Switch>
+          <Route path="/:id">
+            <RouterSection/>
+          </Route>
+          <Route path="*">
+            <Home/>
+          </Route>
+        </Switch>
+      </div>
   );
 }
 
