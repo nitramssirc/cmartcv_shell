@@ -15,11 +15,26 @@ describe('Nav Bar', ()=>{
         expect(getByText(/Criss/).textContent).toBe(expectedText);
     })
 
+    it('should link to home when my name is clicked', ()=>{
+        const expectedValue = "/";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/Criss/).getAttribute('href')).toBe(expectedValue);
+    })
+
+
     it('should display skills link', ()=>{
         const expectedText = "Skills";
         const {getByText} = render(appRender)
 
         expect(getByText(/skills/i).textContent).toBe(expectedText);
+    })
+
+    it('should link to Skills when skills link is clicked', ()=>{
+        const expectedValue = "/Skills";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/skills/i).getAttribute('href')).toBe(expectedValue);
     })
 
     it('should display Experience link', ()=>{
@@ -29,11 +44,25 @@ describe('Nav Bar', ()=>{
         expect(getByText(/experience/i).textContent).toBe(expectedText);
     })
 
+    it('should link to Experience when Experience link is clicked', ()=>{
+        const expectedValue = "/Experience";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/experience/i).getAttribute('href')).toBe(expectedValue);
+    })
+
     it('should display Personal Projects link', ()=>{
         const expectedText = "Personal Projects";
         const {getByText} = render(appRender)
 
         expect(getByText(/personal/i).textContent).toBe(expectedText);
+    })
+
+    it('should link to PersonalProjects when Personal Projects link is clicked', ()=>{
+        const expectedValue = "/PersonalProjects";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/personal/i).getAttribute('href')).toBe(expectedValue);
     })
 
     it('should display Education link', ()=>{
@@ -43,6 +72,13 @@ describe('Nav Bar', ()=>{
         expect(getByText(/education/i).textContent).toBe(expectedText);
     })
 
+    it('should link to Education when Education link is clicked', ()=>{
+        const expectedValue = "/Education";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/education/i).getAttribute('href')).toBe(expectedValue);
+    })
+
     it('should display Print link', ()=>{
         const expectedText = "Print";
         const {getByText} = render(appRender)
@@ -50,11 +86,25 @@ describe('Nav Bar', ()=>{
         expect(getByText(/print/i).textContent).toBe(expectedText);
     })
 
+    it('should link to Print when Print link is clicked', ()=>{
+        const expectedValue = "/Print";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/print/i).getAttribute('href')).toBe(expectedValue);
+    })
+
     it('should display my email', ()=>{
         const expectedText = "w.criss.martin@gmail.com";
         const {getByText} = render(appRender)
 
         expect(getByText(/gmail/i).textContent).toBe(expectedText);
+    })
+
+    it('should mail to when my email is clicked', ()=>{
+        const expectedText = "mailto('w.criss.martin@gmail.com')";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/gmail/i).getAttribute('href')).toBe(expectedText);
     })
 
     it('should display Blog link', ()=>{
