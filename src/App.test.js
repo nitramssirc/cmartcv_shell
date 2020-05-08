@@ -16,7 +16,7 @@ describe('Nav Bar', ()=>{
     })
 
     it('should link to home when my name is clicked', ()=>{
-        const expectedValue = "/asdf";
+        const expectedValue = "/";
         const {getByText} = render(appRender)
 
         expect(getByText(/Criss/).getAttribute('href')).toBe(expectedValue);
