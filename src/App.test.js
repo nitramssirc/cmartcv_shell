@@ -122,3 +122,81 @@ describe('Nav Bar', ()=>{
     })
 
 })
+
+describe('Home', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/"]}><App/></MemoryRouter>);
+    afterEach(cleanup)
+    
+    it('should display Home', ()=>{
+        const expectedText = "Home";
+        const {getByText} = render(appRender)
+
+        expect(getByText(/Home/i).textContent).toBe(expectedText);
+
+    })
+})
+
+describe('Skills', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/Skills"]}><App/></MemoryRouter>);
+    afterEach(cleanup)
+    
+    it('should display Skills Content', ()=>{
+        const expectedText = "Skills";
+        const {getByTestId} = render(appRender)
+
+        expect(getByTestId("Skills").textContent).toBe(expectedText);
+
+    })
+})
+
+describe('Experience', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/Experience"]}><App/></MemoryRouter>);
+    afterEach(cleanup)
+    
+    it('should display Experience Content', ()=>{
+        const expectedText = "Experience";
+        const {getByTestId} = render(appRender)
+
+        expect(getByTestId("Experience").textContent).toBe(expectedText);
+
+    })
+})
+
+describe('PersonalProjects', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/PersonalProjects"]}><App/></MemoryRouter>);
+    afterEach(cleanup)
+    
+    it('should display PersonalProjects Content', ()=>{
+        const expectedText = "PersonalProjects";
+        const {getByTestId} = render(appRender)
+
+        expect(getByTestId("PersonalProjects").textContent).toBe(expectedText);
+
+    })
+})
+
+describe('Education', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/Education"]}><App/></MemoryRouter>);
+    afterEach(cleanup)
+    
+    it('should display Education Content', ()=>{
+        const expectedText = "Education";
+        const {getByTestId} = render(appRender)
+
+        expect(getByTestId("Education").textContent).toBe(expectedText);
+
+    })
+})
+
+describe('Print', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/Print"]}><App/></MemoryRouter>);
+    afterEach(cleanup)
+    
+    it('should display Print Content', ()=>{
+        const expectedText = "Print";
+        const {getByTestId} = render(appRender)
+
+        expect(getByTestId("Print").textContent).toBe(expectedText);
+
+    })
+})
