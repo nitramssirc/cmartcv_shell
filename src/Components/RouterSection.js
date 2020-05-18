@@ -10,6 +10,8 @@ import Sources from "./Sources";
 const RouterSection = () => {
   let { id } = useParams();
 
+  if(!id) id="AboutMe";
+
   return (
     <>
       <MainContent id={id} />
@@ -20,7 +22,7 @@ const RouterSection = () => {
             </Accordion.Toggle>
           <Accordion.Collapse eventKey="1">
             <Card.Body>
-              <TechUsed name={id} />
+              <TechUsed id={id} />
             </Card.Body>
           </Accordion.Collapse>
         </Card>
@@ -30,7 +32,7 @@ const RouterSection = () => {
             </Accordion.Toggle>
           <Accordion.Collapse eventKey="2">
             <Card.Body>
-              <Blogs />
+              <Blogs id={id} />
             </Card.Body>
           </Accordion.Collapse>
         </Card>
@@ -40,7 +42,7 @@ const RouterSection = () => {
             </Accordion.Toggle>
           <Accordion.Collapse eventKey="3">
             <Card.Body>
-              <Sources />
+              <Sources id={id} />
             </Card.Body>
           </Accordion.Collapse> 
         </Card>

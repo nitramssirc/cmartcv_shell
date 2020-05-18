@@ -1,8 +1,8 @@
 import React from "react";
 
 function Sources(props){
-    const {name} = props;
-    return <div>Sources {name}</div>
+    const {id} = props;
+    return <div data-testid={`Sources_${id}`}>Sources {id}</div>
 }
 
 export default Sources

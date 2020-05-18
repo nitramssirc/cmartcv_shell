@@ -127,76 +127,43 @@ describe('Home', ()=>{
     const appRender = (<MemoryRouter initialEntries={["/"]}><App/></MemoryRouter>);
     afterEach(cleanup)
     
-    it('should display Home', ()=>{
-        const expectedText = "Home";
-        const {getByText} = render(appRender)
+    it('should display Main Content', ()=>{
+        const {getByTestId} = render(appRender)
+        expect(getByTestId("MainContent_AboutMe")).toBeTruthy();
+    })
 
-        expect(getByText(/Home/i).textContent).toBe(expectedText);
-
+    it('should display Tech Used Content', ()=>{
+        const {getByTestId} = render(appRender)
+        expect(getByTestId("TechUsed_AboutMe")).toBeTruthy();
+    })
+    it('should display Blog Posts Content', ()=>{
+        const {getByTestId} = render(appRender)
+        expect(getByTestId("Blogs_AboutMe")).toBeTruthy();
+    })
+    it('should display Source Content', ()=>{
+        const {getByTestId} = render(appRender)
+        expect(getByTestId("Sources_AboutMe")).toBeTruthy();
     })
 })
 
-describe('Skills', ()=>{
-    const appRender = (<MemoryRouter initialEntries={["/Skills"]}><App/></MemoryRouter>);
+describe('ID Routes', ()=>{
+    const appRender = (<MemoryRouter initialEntries={["/Route"]}><App/></MemoryRouter>);
     afterEach(cleanup)
     
-    it('should display Skills Content', ()=>{
-        const expectedText = "Skills";
+    it('should display Main Content', ()=>{
         const {getByTestId} = render(appRender)
-
-        expect(getByTestId("Skills").textContent).toBe(expectedText);
-
+        expect(getByTestId("MainContent_Route")).toBeTruthy();
     })
-})
-
-describe('Experience', ()=>{
-    const appRender = (<MemoryRouter initialEntries={["/Experience"]}><App/></MemoryRouter>);
-    afterEach(cleanup)
-    
-    it('should display Experience Content', ()=>{
-        const expectedText = "Experience";
+    it('should display Tech Used Content', ()=>{
         const {getByTestId} = render(appRender)
-
-        expect(getByTestId("Experience").textContent).toBe(expectedText);
-
+        expect(getByTestId("TechUsed_Route")).toBeTruthy();
     })
-})
-
-describe('PersonalProjects', ()=>{
-    const appRender = (<MemoryRouter initialEntries={["/PersonalProjects"]}><App/></MemoryRouter>);
-    afterEach(cleanup)
-    
-    it('should display PersonalProjects Content', ()=>{
-        const expectedText = "PersonalProjects";
+    it('should display Blog Posts Content', ()=>{
         const {getByTestId} = render(appRender)
-
-        expect(getByTestId("PersonalProjects").textContent).toBe(expectedText);
-
+        expect(getByTestId("Blogs_Route")).toBeTruthy();
     })
-})
-
-describe('Education', ()=>{
-    const appRender = (<MemoryRouter initialEntries={["/Education"]}><App/></MemoryRouter>);
-    afterEach(cleanup)
-    
-    it('should display Education Content', ()=>{
-        const expectedText = "Education";
+    it('should display Source Content', ()=>{
         const {getByTestId} = render(appRender)
-
-        expect(getByTestId("Education").textContent).toBe(expectedText);
-
-    })
-})
-
-describe('Print', ()=>{
-    const appRender = (<MemoryRouter initialEntries={["/Print"]}><App/></MemoryRouter>);
-    afterEach(cleanup)
-    
-    it('should display Print Content', ()=>{
-        const expectedText = "Print";
-        const {getByTestId} = render(appRender)
-
-        expect(getByTestId("Print").textContent).toBe(expectedText);
-
+        expect(getByTestId("Sources_Route")).toBeTruthy();
     })
 })
