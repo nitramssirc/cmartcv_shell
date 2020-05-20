@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 
 import ShellNavbar from "./Components/ShellNavbar";
 import RouterSection from "./Components/RouterSection";
-import Home from "./Components/Home";
 
 function App() {
   return (
