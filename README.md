@@ -2,6 +2,8 @@
 The shell for my online cv
 
 Technologies
-* React.js
+* React.js via Create-React-App
+* React-Router
 * Bootstrap
+* React-Bootstrap
 * AWS
