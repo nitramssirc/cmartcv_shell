@@ -23,7 +23,7 @@ jobs:
         run: dotnet restore
 
       - name: Build Blazor WebAssembly
-        run: dotnet build --configuration Release --output ./publish
+        run: dotnet publish -c Release -o ./publish
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
