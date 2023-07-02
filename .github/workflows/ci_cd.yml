@@ -33,6 +33,6 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Publish to AWS S3
-        run: aws s3 sync ./publish s3://${{ secrets.AWS_PRODUCTION_BUCKET_NAME }} --delete
+        run: aws s3 sync ./publish/wwwroot s3://${{ secrets.AWS_PRODUCTION_BUCKET_NAME }} --delete
 
       
