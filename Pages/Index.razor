@@ -1,15 +1,25 @@
 ﻿@page "/"
 
-<CMartPageTitle>About Me</CMartPageTitle>
+<PageWidgetComponent Title="About Me"
+                     PageDetail="@_pageDetail">
+    <h3>About Me</h3>
 
-<h3>About Me</h3>
+    <p>
+        I am a Sr. Software Engineer with over 15 years experience developing and architecting a
+        wide range of applications from web sites and services to game engines and build tools.
+    </p>
+    <p>
+        I have a passion for learning and a love for solving problems. I am a self-starter
+        who is always looking for ways to improve myself and the team around me.
+    </p>
+</PageWidgetComponent>
 
-<p>
-    I am a Sr. Software Engineer with over 15 years experience developing and architecting a
-    wide range of applications from web sites and services to game engines and build tools.
-</p>
-<p>
-    I have a passion for learning and a love for solving problems. I am a self-starter
-    who is always looking for ways to improve myself and the team around me.
-</p>
-
+@code {
+    private PageDetail _pageDetail = new PageDetail
+        {
+            TechUsed = new[] { "Blazor", "C#", "AWS", "S3" },
+            SourceLinks = new[] { "https://github.com/nitramssirc/cmartcv_shell" },
+            BlogPosts = new[] { "https://nitramssirc.github.io/2020/08/01/CMartCV-Shell.html" },
+            DiagramImages = new[] { "https://nitramssirc.github.io/images/CMartCV-Shell.png" }
+        };
+}

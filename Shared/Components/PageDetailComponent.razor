@@ -1,0 +1,45 @@
+﻿<h3>PageDetailComponent</h3>
+<div>
+    @if (@PageDetail.TechUsed != null)
+    {
+        <h4>Tech Used</h4>
+        @foreach (var tech in @PageDetail.TechUsed)
+        {
+            <div>@tech</div>
+        }
+    }
+</div>
+<div>
+    @if (@PageDetail.SourceLinks != null)
+    {
+        <h4>Source Links</h4>
+        @foreach (var sourceLink in @PageDetail.SourceLinks)
+        {
+            <div>@sourceLink</div>
+        }
+    }
+</div>
+<div>
+    @if (@PageDetail.BlogPosts != null)
+    {
+        <h4>Blog Posts</h4>
+        @foreach (var blogPosts in @PageDetail.BlogPosts)
+        {
+            <div>@blogPosts</div>
+        }
+    }
+</div>
+<div>
+    @if (@PageDetail.DiagramImages != null)
+    {
+        <h4>DiagramImages</h4>
+        @foreach (var diagram in @PageDetail.DiagramImages)
+        {
+            <div>@diagram</div>
+        }
+    }
+</div>
+@code {
+    [Parameter]
+    public PageDetail PageDetail { get; set; }
+}
