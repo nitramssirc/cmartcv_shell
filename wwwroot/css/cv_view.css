@@ -1,0 +1,6 @@
+﻿.btn-tech-stack,
+.btn-tech-stack:focus,
+.btn-tech-stack:hover {
+    background-color: #d83552;
+    border-color: darkred;
+}

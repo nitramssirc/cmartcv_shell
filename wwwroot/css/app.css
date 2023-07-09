@@ -72,4 +72,46 @@ a, .btn-link {
 
 .btn-tech-stack{
     margin: 0 5px;
+    min-width: 135px;
+}
+
+.tech-view-flash {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 0vw;
+    height: 0vh;
+}
+
+    .tech-view-flash.play {
+        background-image: radial-gradient(circle, white, rgba(0, 0, 0, 0) 99% );
+        visibility: visible;
+        animation-name: tech-view-flash;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        opacity: 1;
+    }
+
+@keyframes tech-view-flash{
+    0%{
+        width:0vw;
+        height:0vh;
+        opacity:1;
+        visibility: visible;
+    }
+    33% {
+        width: 5000vw;
+        height: 5000vh;
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        width: 10000vw;
+        height: 10000vh;
+        opacity: 0;
+        visibility: hidden;
+    }
 }

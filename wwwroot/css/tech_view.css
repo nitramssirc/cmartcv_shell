@@ -1,0 +1,18 @@
+﻿body {
+    background-image: radial-gradient(circle, #003B00, #0D0208 );
+}
+
+.btn-tech-stack{
+
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+    font-family: 'Matrix', sans-serif;
+}
+
+

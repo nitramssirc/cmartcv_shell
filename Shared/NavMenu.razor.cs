@@ -10,15 +10,18 @@ namespace CMartCV_Shell.Shared
         private bool collapseNavMenu = true;
         private string? NavBarCssClass => collapseNavMenu ? null : "show";
         private string? NavButtonCssClass => collapseNavMenu ? "collapsed" : null;
-        private string? TogglePageDetailCssClass => _techViewService.IsTechViewShowing ? "fa fa-chevron-left" : "fa fa-chevron-right";
+
+        private string TechViewButtonText => _techViewService.IsTechViewShowing ? "View CV" : "View Tech Stack";
+
         private void ToggleNavMenu()
         {
             collapseNavMenu = !collapseNavMenu;
         }
 
-        private void TogglePageDetail()
+        private void ToggleTechView()
         {
             _techViewService.ToggleTechView();
+            StateHasChanged();
         }
     }
 }

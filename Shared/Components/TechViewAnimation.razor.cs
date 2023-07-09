@@ -14,15 +14,16 @@ using Microsoft.JSInterop;
 using CMartCV_Shell;
 using CMartCV_Shell.Shared;
 using CMartCV_Shell.Shared.Components;
+using CMartCV_Shell.Models;
 using CMartCV_Shell.Services;
 
-namespace CMartCV_Shell.Shared
+namespace CMartCV_Shell.Shared.Components
 {
-    public partial class MainLayout
+    public partial class TechViewAnimation
     {
         [Inject] private ITechViewService _techViewService { get; set; }
 
-        private string _pageStyleSheet { get { return _techViewService.IsTechViewShowing ? "tech_view" : "cv_view"; } }
+        private string? _animateCssClass { get { return _techViewService.IsTechViewShowing ? "play" : null; } }
 
         protected override void OnInitialized()
         {
