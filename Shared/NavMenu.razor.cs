@@ -1,30 +1,24 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using CMartCV_Shell.Services;
 using Microsoft.AspNetCore.Components;
-using System.Net.Http;
-using System.Net.Http.Json;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.AspNetCore.Components.Routing;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.Web.Virtualization;
-using Microsoft.AspNetCore.Components.WebAssembly.Http;
-using Microsoft.JSInterop;
-using CMartCV_Shell;
-using CMartCV_Shell.Shared;
 
 namespace CMartCV_Shell.Shared
 {
     public partial class NavMenu
     {
+        [Inject] private ITechViewService _techViewService { get; set; }       
+
         private bool collapseNavMenu = true;
         private string? NavBarCssClass => collapseNavMenu ? null : "show";
         private string? NavButtonCssClass => collapseNavMenu ? "collapsed" : null;
-
+        private string? TogglePageDetailCssClass => _techViewService.IsTechViewShowing ? "fa fa-chevron-left" : "fa fa-chevron-right";
         private void ToggleNavMenu()
         {
             collapseNavMenu = !collapseNavMenu;
+        }
+
+        private void TogglePageDetail()
+        {
+            _techViewService.ToggleTechView();
         }
     }
 }

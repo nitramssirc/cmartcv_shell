@@ -5,6 +5,9 @@
                 aria-controls="navbarCollapse" aria-label="Toggle navigation" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <button class="btn btn-primary btn-tech-stack @NavBarCssClass" @onclick="TogglePageDetail">
+            View Tech Stack
+        </button>
         <div class="collapse navbar-collapse @NavBarCssClass" id="navbarCollapse" @onclick="ToggleNavMenu">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
@@ -29,6 +32,7 @@
                 </li>
             </ul>
         </div>
+        
         <div class="navbar-collapse collapse @NavBarCssClass" style="">
             <div class="ml-auto navbar-nav">
                 <span class="navbar-text">
@@ -42,5 +46,7 @@
         </div>
     </div>
 </nav>
+
+
 
 

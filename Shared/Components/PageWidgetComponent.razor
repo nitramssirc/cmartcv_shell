@@ -2,7 +2,7 @@
 
 <h3>@Title</h3>
 <div>
-    @if (_showingPageDetail)
+    @if (_techViewService.IsTechViewShowing)
     {
         <PageDetailComponent PageDetail="@PageDetail" />
     }
@@ -11,9 +11,6 @@
         @ChildContent
     }
 </div>
-<button class="btn btn-primary" @onclick="TogglePageDetail">
-    Toggle Page Detail
-</button>
 
 
 @code {
@@ -26,11 +23,16 @@
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
-    private bool _showingPageDetail = false;
+    [Inject]
+    private ITechViewService _techViewService { get; set; }
 
-    private void TogglePageDetail()
+    protected override void OnInitialized()
     {
-        _showingPageDetail = !_showingPageDetail;
+        _techViewService.TechViewShowingChanged += TechViewShowingChanged;
     }
 
+    private void TechViewShowingChanged(object sender, EventArgs e)
+    {
+        StateHasChanged();
+    }
 }
