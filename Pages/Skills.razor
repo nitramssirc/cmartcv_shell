@@ -1,19 +1,28 @@
 ﻿@page "/skills"
 
-<h3>Skills</h3>
-<ul>
-    <li>C#</li>
-    <li>HTML</li>
-    <li>Visual Studio</li>
-    <li>JavaScript</li>
-    <li>SOLID Design Principles</li>
-    <li>Software Architecture</li>
-    <li>Test-Driven Development</li>
-    <li>SQL Server</li>
-    <li>Jenkins</li>
-    <li>Agile Methodologies</li>
-    <li>Project Management</li>
-</ul>
-@code {
+<PageWidgetComponent Title="Skills"
+                     PageDetail="@_pageDetail">
+    <ul>
+        <li>C#</li>
+        <li>HTML</li>
+        <li>Visual Studio</li>
+        <li>JavaScript</li>
+        <li>SOLID Design Principles</li>
+        <li>Software Architecture</li>
+        <li>Test-Driven Development</li>
+        <li>SQL Server</li>
+        <li>Jenkins</li>
+        <li>Agile Methodologies</li>
+        <li>Project Management</li>
+    </ul>
+</PageWidgetComponent>
 
+@code {
+    private PageDetail _pageDetail = new PageDetail
+        {
+            TechUsed = new[] { "Not Sure Yet" },
+            SourceLinks = new string[0],
+            BlogPosts = new string[0],
+            DiagramImages = new string[0]
+        };
 }

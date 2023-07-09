@@ -1,80 +1,87 @@
 ﻿@page "/experience"
 
-<h3>Experience</h3>
-<h4>Director of Platform Engineering</h4>
-<p>Aurify</p>
-<p>June 2021-Present</p>
-<p>
-    <ul>
-        <li>Led team of 5 developers and 2 QA testers using Scrum methodologies</li>
-        <li>Developed and helped implement architecture for refactoring game platform with a focus on SOLID design principles and Test Driven Development</li>
-        <li>Modified our Jenkins build system from being a monolithic, build everything at once, system to a Continuous Integration build system that only builds when things have changed which decreased our build times up to 10x.</li>
-        <li>Leverage strong debugging and troubleshooting skills to resolve field issues quickly</li>
-    </ul>
-</p>
-<h4>Game Platform Manager/Sr. Engineer</h4>
-<p>Aurify</p>
-<p>June 2011 – June 2021</p>
-<p>
-    <ul>
-        <li>Utilized the following technologies: C#, Monogame, SQL Server, Jenkins, Javascript, Typescript, React</li>
-        <li>Architected and developed in house game engine using Monogame as the rendering framework that has been used to develop over 200+ titles since 2011</li>
-        <li>Developed several runtime tools that allow game designers and QA team members to interact with the games to tune game mechanics or generate expected results</li>
-        <li>Developed a video element leveraging the Theora Playback Library that renders videos that include an alpha channel as sprites</li>
-        <li>Developed a web browser element leveraging the Awesomium library that renders web pages as sprites and allows for user interaction as well as JavaScript interaction</li>
-        <li>Ported the C# game engine to the web using TypeScript and Easel.js to build all games available on RediBids.com and RewardGames.com</li>
-        <li>Created an application that allowed any version of our Legacy game engine to run against the latest game server by translating the messages sent by the server to messages understood by the game and vice versa using json serialization, .net reflection, and IL code</li>
-        <li>Wrote code to interface with attached hardware such as bill acceptors, ticket printers, buttons, and LED lighting</li>
-        <li>Managed all platform development projects for company from requirements gathering to release</li>
-        <li>Created and managed the build process for all releases and QA builds using Jenkins</li>
-        <li>Have traveled to several sites to help install and configure new installations as well as troubleshoot issues reported in the field</li>
-        <li>Implemented several project management and documentation processes which were nonexistent before moving into the manager role (Project plans, Release Notes, Code organization via branches and tags)</li>
-    </ul>
-</p>
-<h4>Web Developer</h4>
-<p>EMSI</p>
-<p>May 2010 – June 2011</p>
-<p>
-    <ul>
-        <li>Full stack web developer using C#, ASP MVC, Javascript, Jquery, SQL Server</li>
-    </ul>
-</p>
-<h4>Developer</h4>
-<p>CardLab, Inc.</p>
-<p>Oct 2009 – Apr 2010</p>
-<p>
-    <ul>
-        <li>Full stack web development using C#, ASP.net, SQL Server, and WCF</li>
-    </ul>
-</p>
-<h4>Software Engineer</h4>
-<p>Highland Capital Management, L.P.</p>
-<p>Aug 2008 – Oct 2009</p>
-<p>
-    <ul>
-        <li>Full stack web development for internal intranet site using C#, ASP.net, WCF, SQL Server, and K2 Blackpearl</li>
-    </ul>
-</p>
-<h4>Development</h4>
-<p>PAYjr</p>
-<p>Aug 2006 – Aug 2008</p>
-<p>
-    <ul>
-        <li>Full stack web development using C#, ASP.net, SQL Server, and javascript</li>
-    </ul>
-</p>
-<h4>Technical support agent</h4>
-<p>eInstruction</p>
-<p>Oct 2005 – Aug 2006</p>
-<p>
-    <ul>
-        <li>Handle technical support inquiries about the software through phone, email, and chat</li>
-        <li>Distribute technical support email requests evenly amongst all of the tech support agents evenly</li>
-        <li>Developed a C# program to aide in the distribution and logging of technical support emails</li>
-    </ul>
-</p>
-
+<PageWidgetComponent Title="Experience"
+                     PageDetail="@_pageDetail">
+    <h4>Director of Platform Engineering</h4>
+    <p>Aurify</p>
+    <p>June 2021-Present</p>
+    <p>
+        <ul>
+            <li>Led team of 5 developers and 2 QA testers using Scrum methodologies</li>
+            <li>Developed and helped implement architecture for refactoring game platform with a focus on SOLID design principles and Test Driven Development</li>
+            <li>Modified our Jenkins build system from being a monolithic, build everything at once, system to a Continuous Integration build system that only builds when things have changed which decreased our build times up to 10x.</li>
+            <li>Leverage strong debugging and troubleshooting skills to resolve field issues quickly</li>
+        </ul>
+    </p>
+    <h4>Game Platform Manager/Sr. Engineer</h4>
+    <p>Aurify</p>
+    <p>June 2011 – June 2021</p>
+    <p>
+        <ul>
+            <li>Utilized the following technologies: C#, Monogame, SQL Server, Jenkins, Javascript, Typescript, React</li>
+            <li>Architected and developed in house game engine using Monogame as the rendering framework that has been used to develop over 200+ titles since 2011</li>
+            <li>Developed several runtime tools that allow game designers and QA team members to interact with the games to tune game mechanics or generate expected results</li>
+            <li>Developed a video element leveraging the Theora Playback Library that renders videos that include an alpha channel as sprites</li>
+            <li>Developed a web browser element leveraging the Awesomium library that renders web pages as sprites and allows for user interaction as well as JavaScript interaction</li>
+            <li>Ported the C# game engine to the web using TypeScript and Easel.js to build all games available on RediBids.com and RewardGames.com</li>
+            <li>Created an application that allowed any version of our Legacy game engine to run against the latest game server by translating the messages sent by the server to messages understood by the game and vice versa using json serialization, .net reflection, and IL code</li>
+            <li>Wrote code to interface with attached hardware such as bill acceptors, ticket printers, buttons, and LED lighting</li>
+            <li>Managed all platform development projects for company from requirements gathering to release</li>
+            <li>Created and managed the build process for all releases and QA builds using Jenkins</li>
+            <li>Have traveled to several sites to help install and configure new installations as well as troubleshoot issues reported in the field</li>
+            <li>Implemented several project management and documentation processes which were nonexistent before moving into the manager role (Project plans, Release Notes, Code organization via branches and tags)</li>
+        </ul>
+    </p>
+    <h4>Web Developer</h4>
+    <p>EMSI</p>
+    <p>May 2010 – June 2011</p>
+    <p>
+        <ul>
+            <li>Full stack web developer using C#, ASP MVC, Javascript, Jquery, SQL Server</li>
+        </ul>
+    </p>
+    <h4>Developer</h4>
+    <p>CardLab, Inc.</p>
+    <p>Oct 2009 – Apr 2010</p>
+    <p>
+        <ul>
+            <li>Full stack web development using C#, ASP.net, SQL Server, and WCF</li>
+        </ul>
+    </p>
+    <h4>Software Engineer</h4>
+    <p>Highland Capital Management, L.P.</p>
+    <p>Aug 2008 – Oct 2009</p>
+    <p>
+        <ul>
+            <li>Full stack web development for internal intranet site using C#, ASP.net, WCF, SQL Server, and K2 Blackpearl</li>
+        </ul>
+    </p>
+    <h4>Development</h4>
+    <p>PAYjr</p>
+    <p>Aug 2006 – Aug 2008</p>
+    <p>
+        <ul>
+            <li>Full stack web development using C#, ASP.net, SQL Server, and javascript</li>
+        </ul>
+    </p>
+    <h4>Technical support agent</h4>
+    <p>eInstruction</p>
+    <p>Oct 2005 – Aug 2006</p>
+    <p>
+        <ul>
+            <li>Handle technical support inquiries about the software through phone, email, and chat</li>
+            <li>Distribute technical support email requests evenly amongst all of the tech support agents evenly</li>
+            <li>Developed a C# program to aide in the distribution and logging of technical support emails</li>
+        </ul>
+    </p>
+</PageWidgetComponent>
 
 @code {
-
+    private PageDetail _pageDetail = new PageDetail
+        {
+            TechUsed = new[] { "Not Sure Yet" },
+            SourceLinks = new string[0],
+            BlogPosts = new string[0],
+            DiagramImages = new string[0]
+        };
 }

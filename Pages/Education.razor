@@ -1,11 +1,20 @@
 ﻿@page "/education"
 
-<h3>Education</h3>
-<h4>University of North Texas</h4>
-<p>
-    Bachelor of Science in Computer Science<br />
-    2001 - 2006
-</p>
-@code {
+<PageWidgetComponent Title="Education"
+                     PageDetail="@_pageDetail">
+    <h4>University of North Texas</h4>
+    <p>
+        Bachelor of Science in Computer Science<br />
+        2001 - 2006
+    </p>
+</PageWidgetComponent>
 
+@code {
+    private PageDetail _pageDetail = new PageDetail
+        {
+            TechUsed = new[] { "Not Sure Yet" },
+            SourceLinks = new string[0],
+            BlogPosts = new string[0],
+            DiagramImages = new string[0]
+        };
 }
